@@ -55,6 +55,11 @@ void Renderer::show(SDL_Texture* image) {
 }
 
 void Renderer::updateScreen() { SDL_RenderPresent(renderer_); }
+
+void Renderer::updateTitle(std::string title) {
+  SDL_SetWindowTitle(window_, title.c_str());
+}
+
 void Renderer::clearScreen() {
   SDL_SetRenderDrawColor(renderer_, 0xFF, 0xFF, 0xFF, 0xFF);
   SDL_RenderClear(renderer_);

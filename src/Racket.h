@@ -15,12 +15,15 @@ class Racket {
   int y = 10;
   int min_y_ = 0;
   int max_y_ = 0;
+  SDL_Rect boundingBox_;
 
  public:
   void update();
-  Racket(SDL_Renderer* renderer, int screen_width, int screen_height);
+  Racket(SDL_Renderer* renderer, int screen_width, int screen_height,
+         SDL_Rect boundingBox);
   void up();
   void down();
+  SDL_Rect getBoundingBox();
 };
 
 #endif

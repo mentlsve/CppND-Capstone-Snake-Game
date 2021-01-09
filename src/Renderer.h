@@ -3,6 +3,8 @@
 
 #include <SDL2/SDL.h>
 
+#include <string>
+
 class Renderer {
  private:
   SDL_Window* window_;
@@ -16,6 +18,7 @@ class Renderer {
   SDL_Renderer* getRenderer();
   void show(SDL_Texture* image);
   void updateScreen();
+  void updateTitle(std::string str);
   void clearScreen();
 };
 
